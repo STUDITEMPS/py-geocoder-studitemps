@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "geocoder-studitemps"
+version = "0.1.0"
+description = "A Geocoder for Studitemps"
+authors = ["John Faucett <john.faucett@studitemps.de>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.25.1"
+pydantic = "^1.8.2"
+google-i18n-address = "^2.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

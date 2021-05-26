@@ -1,0 +1,1 @@
+from geocoder_studitemps.geocoder import Geocoder, Address, Geopoint

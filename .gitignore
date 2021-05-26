@@ -1,0 +1,9 @@
+# editor relics
+.vscode/
+
+# environment files
+.envrc 
+
+# python relics
+__pycache__/
+*.py[oc]
