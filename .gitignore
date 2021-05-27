@@ -3,6 +3,8 @@
 
 # environment files
 .envrc 
+.env*
+!.env.example
 
 # python relics
 __pycache__/

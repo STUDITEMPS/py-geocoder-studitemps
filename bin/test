@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+from geocoder_studitemps.config import settings
+from geocoder_studitemps.geocoder import Geocoder
+
+g = Geocoder(settings)
+g.authenticate()
+geopoint = g.coordinates("Im mediapark 4a, 50670 Köln")
+print(geopoint)
