@@ -23,27 +23,28 @@ from geocoder_studitemps import (
     settings
 )
 
-# this will create and validate the format of an address, using the 
+# this will create and validate the format of an address, using 
 # the google i18 address api. see: https://chromium-i18n.appspot.com/ssl-address
 address = Address(street="Im Mediapark 4a", postal_code="50670", city="Köln")
 
 
-# now create a geocoder instance
-# in general there are two flows
+# Now create a Geocoder instance. In general there are two flows
 # 1) you can use an existing auth0 token (perhaps you have cached it)
-# 2) to can authenticate, get a new token and use that one.
+# 2) Directly authenticate with auth0, get a new token and use that one.
 # This example shows the second approach
 
 g = Geocoder(settings)
 
 # now authenticate and store the auth_token inside the Geocoder instance
+# If authentication fails and exception will be raised.
 g.authenticate()
 
-# now we can make api calls
+# now we can make geocoding API calls
 
 # get long/lat values
 res = geocoder.coordinates(address)
 print(res) # Geopoint(latitude=50.94832, longitude=6.9454159)
 
-# if you enter an address that doesn't exist or can't be found, then currently None is returned.
+# if you enter an address that doesn't exist or can't be found, 
+# then currently None is returned and an Exception will not be raised.
 ```
