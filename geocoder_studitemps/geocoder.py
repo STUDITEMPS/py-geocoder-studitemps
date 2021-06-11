@@ -14,15 +14,18 @@ class Address(BaseModel):
     @root_validator(pre=False)
     def check_normalization_passes(cls, values):
         normalize_address({
-            "street_address" : values["street"],
-            "postal_code" : values["postal_code"],
-            "city" : values["city"],
-            "country_code" : values["country_code"]
+            "street_address" : values["street"] if "street" in values else None,
+            "postal_code" : values["postal_code"] if "postal_code" in values else None,
+            "city" : values["city"] if "city" in values else None,
+            "country_code" : values["country_code"] if "country_code" in values else None,
         })
         return values
 
-    def __str__(self) -> str:
+    def to_request_string(self) -> str:
         return f"{self.street}, {self.postal_code} {self.city}"
+
+    def __str__(self) -> str:
+        return f"<Address ({self.street}, {self.postal_code} {self.city}) ({self.country_code})>"
 
 
 class Geopoint(BaseModel):
@@ -67,7 +70,7 @@ class Geocoder:
 
     def _do_request(self, address: Address):
         headers = {"authorization" : f"Bearer {self._access_token}" }
-        params = {"address" : str(address)}
+        params = {"address" : address.to_request_string()}
 
         result = requests.get(
             self._base_url(),
