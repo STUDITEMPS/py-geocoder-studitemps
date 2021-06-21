@@ -147,7 +147,7 @@ testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xm
 
 [[package]]
 name = "python-dotenv"
-version = "0.17.1"
+version = "0.18.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
 category = "main"
 optional = false
@@ -206,7 +206,7 @@ brotli = ["brotlipy (>=0.6.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "b01ce850bc7bb58a7cf327729ef9b54571d3aaa3e2836c06049d605249c18589"
+content-hash = "36472042337eabf2e2137974cef6ceab72c9e1d7ee79cfa7f3577acbd87d7146"
 
 [metadata.files]
 atomicwrites = [
@@ -286,8 +286,8 @@ pytest = [
     {file = "pytest-6.2.4.tar.gz", hash = "sha256:50bcad0a0b9c5a72c8e4e7c9855a3ad496ca6a881a3641b4260605450772c54b"},
 ]
 python-dotenv = [
-    {file = "python-dotenv-0.17.1.tar.gz", hash = "sha256:b1ae5e9643d5ed987fc57cc2583021e38db531946518130777734f9589b3141f"},
-    {file = "python_dotenv-0.17.1-py2.py3-none-any.whl", hash = "sha256:00aa34e92d992e9f8383730816359647f358f4a3be1ba45e5a5cefd27ee91544"},
+    {file = "python-dotenv-0.18.0.tar.gz", hash = "sha256:effaac3c1e58d89b3ccb4d04a40dc7ad6e0275fda25fd75ae9d323e2465e202d"},
+    {file = "python_dotenv-0.18.0-py2.py3-none-any.whl", hash = "sha256:dd8fe852847f4fbfadabf6183ddd4c824a9651f02d51714fa075c95561959c7d"},
 ]
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},
