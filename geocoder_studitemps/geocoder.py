@@ -68,6 +68,9 @@ class Geocoder:
         response = self._do_request(address)
         return self._handle_response(response)
 
+    def get_access_token(self) -> str:
+        return self._access_token
+
     def _do_request(self, address: Address):
         headers = {"authorization" : f"Bearer {self._access_token}" }
         params = {"address" : address.to_request_string()}
