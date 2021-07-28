@@ -1,6 +1,7 @@
 import pytest
 from pydantic import ValidationError
 from geocoder_studitemps.geocoder import Address
+from i18naddress import InvalidAddress
 
 
 def test_works_on_valid_addresses():
@@ -32,10 +33,11 @@ def test_raises_validation_error_on_invalid_addresses():
                 "postal_code" : "800 45",
                 "city" : "Madrid"
             },
-            "err" : r"postal_code.*invalid"
+            "err" : r"Invalid address*"
         }
     ]
 
     for addr_info in addresses:
-        with pytest.raises(ValidationError, match=addr_info["err"]):
+        with pytest.raises(InvalidAddress, match=addr_info["err"]):
             addr = Address(**addr_info["data"])
+            addr.validate()

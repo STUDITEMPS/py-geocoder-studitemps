@@ -5,21 +5,22 @@ from pydantic import BaseModel, validator, root_validator
 from i18naddress import normalize_address
 from geocoder_studitemps.config import Settings
 
-class Address(BaseModel):
-    street: str
-    postal_code: str
-    city: str
-    country_code: str = "DE"
 
-    @root_validator(pre=False)
-    def check_normalization_passes(cls, values):
+class Address(object):
+
+    def __init__(self, street, postal_code, city, country_code = "DE"):
+        self.street = street
+        self.postal_code = postal_code
+        self.city = city
+        self.country_code = country_code
+
+    def validate(self):
         normalize_address({
-            "street_address" : values["street"] if "street" in values else None,
-            "postal_code" : values["postal_code"] if "postal_code" in values else None,
-            "city" : values["city"] if "city" in values else None,
-            "country_code" : values["country_code"] if "country_code" in values else None,
+            "street_address" : self.street if self.street else None,
+            "postal_code" : self.postal_code if self.postal_code else None,
+            "city" : self.city if self.city else None,
+            "country_code" : self.country_code if self.country_code else None,
         })
-        return values
 
     def to_request_string(self) -> str:
         return f"{self.street}, {self.postal_code} {self.city}"
