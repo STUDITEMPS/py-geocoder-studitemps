@@ -39,10 +39,12 @@ class Geocoder:
     def __init__(
         self,
         settings: Settings,
-        access_token: str = None
+        access_token: str = None,
+        timeout: int = 5
     ) -> None:
         self._settings = settings
         self._access_token = access_token
+        self._timeout = timeout
 
     def authenticate(self) -> Response:
         """
@@ -79,7 +81,8 @@ class Geocoder:
         result = requests.get(
             self._base_url(),
             params=params,
-            headers=headers
+            headers=headers,
+            timeout=self._timeout
         )
 
         return result

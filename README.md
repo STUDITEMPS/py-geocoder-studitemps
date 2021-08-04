@@ -27,6 +27,9 @@ from geocoder_studitemps import (
 # the google i18 address api. see: https://chromium-i18n.appspot.com/ssl-address
 address = Address(street="Im Mediapark 4a", postal_code="50670", city="Köln")
 
+# We can also attempt to validate the address if we want to using the i18address API
+# This can fail and will raise an InvalidAddress exception
+address.validate()
 
 # Now create a Geocoder instance. In general there are two flows
 # 1) you can use an existing auth0 token (perhaps you have cached it)
