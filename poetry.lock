@@ -52,7 +52,7 @@ test = ["pytest (>=6)"]
 
 [[package]]
 name = "google-i18n-address"
-version = "2.5.0"
+version = "2.5.2"
 description = "Address validation helpers for Google's i18n address database"
 category = "main"
 optional = false
@@ -203,7 +203,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "f63e0bac0866a7a4c0b320351b37f5910481c557010397316a577c138392fcaf"
+content-hash = "1951d59f023f6dadddcea9bebee1642e0ca2d3da076738a151d8a4ae9c93095e"
 
 [metadata.files]
 attrs = [
@@ -227,8 +227,8 @@ exceptiongroup = [
     {file = "exceptiongroup-1.1.0.tar.gz", hash = "sha256:bcb67d800a4497e1b404c2dd44fca47d3b7a5e5433dbab67f96c1a685cdfdf23"},
 ]
 google-i18n-address = [
-    {file = "google-i18n-address-2.5.0.tar.gz", hash = "sha256:61e3e6e8bc015e68f1c62ad78449ae9d9e444657bb191f2f5561b897ea2eb1d7"},
-    {file = "google_i18n_address-2.5.0-py3-none-any.whl", hash = "sha256:c71b413eb6bea905936d82b45f57ef4e5bc05d7c6986666f66b8ee425f0b6ed7"},
+    {file = "google-i18n-address-2.5.2.tar.gz", hash = "sha256:44ef2ba987b4258ed5248ff0ce818e99807bda2599db99f97a4d549aae83e739"},
+    {file = "google_i18n_address-2.5.2-py3-none-any.whl", hash = "sha256:97c5a40e96cdd6000a1cf29ed45903557aece3a91755cfcb5dced14005fbd93c"},
 ]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
