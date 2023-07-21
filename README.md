@@ -1,5 +1,11 @@
 ## Geocoder Python
 
+### Requirements
+
+install  the dependencies using the command bellow:
+
+    pip install -r requirements.txt
+
 ### Usage
 
 You will need to create an application in Auth0 or use an existing one.
