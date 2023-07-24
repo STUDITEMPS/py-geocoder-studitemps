@@ -1,5 +1,11 @@
 ## Geocoder Python
 
+### Requirements
+
+install  the dependencies using the command bellow:
+
+    pip install -r requirements.txt
+
 ### Usage
 
 #### Step 1: Set environment variables

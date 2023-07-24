@@ -1,0 +1,4 @@
+requests==2.31.0
+pydantic==1.10.11
+google-i18n-address==3.1.0
+python-dotenv==1.0.0
